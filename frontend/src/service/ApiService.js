@@ -3,7 +3,7 @@ import CryptoJS from "crypto-js";
 
 export default class ApiService {
 
-    static BASE_URL = "http://localhost:5050/api";
+    static BASE_URL = "http://localhost:8080/api";
     static ENCRYPTION_KEY = "phegon-dev-inventory";
 
 
