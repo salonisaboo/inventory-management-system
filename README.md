@@ -1,4 +1,4 @@
-# Inventra – Smart Inventory Management System
+# Smart Inventory Management System
 
 Inventra is a full-stack Inventory Management System designed to help businesses manage products, suppliers, purchases, sales, and stock movement in a structured and secure manner.  
 The system simplifies inventory operations, maintains accurate transactional records, and supports informed decision-making through organized data access.
