@@ -1,7 +1,7 @@
-package com.riya.InventoryMgtSys.security;
+package com.project.InventoryMgtSys.security;
 
-import com.riya.InventoryMgtSys.exceptions.CustomAccessDenialHandler;
-import com.riya.InventoryMgtSys.exceptions.CustomAuthenticationEntryPoint;
+import com.project.InventoryMgtSys.exceptions.CustomAccessDenialHandler;
+import com.project.InventoryMgtSys.exceptions.CustomAuthenticationEntryPoint;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
