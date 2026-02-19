@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.exceptions;
+package com.project.InventoryMgtSys.exceptions;
 
 public class NotFoundException extends RuntimeException {
     public NotFoundException(String message) {
