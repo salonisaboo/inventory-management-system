@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.models;
+package com.project.InventoryMgtSys.models;
 
 
 import jakarta.persistence.*;
