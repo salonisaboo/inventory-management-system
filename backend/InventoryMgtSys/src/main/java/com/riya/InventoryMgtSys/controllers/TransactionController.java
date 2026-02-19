@@ -1,9 +1,9 @@
 package com.project.InventoryMgtSys.controllers;
 
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.dtos.TransactionRequest;
-import com.riya.InventoryMgtSys.enums.TransactionStatus;
-import com.riya.InventoryMgtSys.services.TransactionService;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.TransactionRequest;
+import com.project.InventoryMgtSys.enums.TransactionStatus;
+import com.project.InventoryMgtSys.services.TransactionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
