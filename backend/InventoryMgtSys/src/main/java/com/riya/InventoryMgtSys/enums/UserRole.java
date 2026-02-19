@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.enums;
+package com.project.InventoryMgtSys.enums;
 
 public enum UserRole {
 
