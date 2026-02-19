@@ -1,9 +1,9 @@
 package com.project.InventoryMgtSys.controllers;
 
-import com.riya.InventoryMgtSys.dtos.LoginRequest;
-import com.riya.InventoryMgtSys.dtos.RegisterRequest;
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.services.UserService;
+import com.project.InventoryMgtSys.dtos.LoginRequest;
+import com.project.InventoryMgtSys.dtos.RegisterRequest;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
