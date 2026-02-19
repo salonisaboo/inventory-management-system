@@ -1,8 +1,8 @@
-package com.riya.InventoryMgtSys.security;
+package com.project.InventoryMgtSys.security;
 
-import com.riya.InventoryMgtSys.exceptions.NotFoundException;
-import com.riya.InventoryMgtSys.models.User;
-import com.riya.InventoryMgtSys.repositories.UserRepository;
+import com.project.InventoryMgtSys.exceptions.NotFoundException;
+import com.project.InventoryMgtSys.models.User;
+import com.project.InventoryMgtSys.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
