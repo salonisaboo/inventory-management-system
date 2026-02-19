@@ -1,8 +1,8 @@
-package com.riya.InventoryMgtSys.services;
+package com.project.InventoryMgtSys.services;
 
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.dtos.TransactionRequest;
-import com.riya.InventoryMgtSys.enums.TransactionStatus;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.TransactionRequest;
+import com.project.InventoryMgtSys.enums.TransactionStatus;
 
 public interface TransactionService {
     Response purchase(TransactionRequest transactionRequest);
