@@ -1,9 +1,9 @@
 package com.project.InventoryMgtSys.controllers;
 
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.dtos.UserDTO;
-import com.riya.InventoryMgtSys.models.User;
-import com.riya.InventoryMgtSys.services.UserService;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.UserDTO;
+import com.project.InventoryMgtSys.models.User;
+import com.project.InventoryMgtSys.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
