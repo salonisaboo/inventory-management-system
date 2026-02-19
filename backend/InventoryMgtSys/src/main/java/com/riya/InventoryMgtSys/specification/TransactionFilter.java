@@ -1,6 +1,6 @@
-package com.riya.InventoryMgtSys.specification;
+package com.project.InventoryMgtSys.specification;
 
-import com.riya.InventoryMgtSys.models.Transaction;
+import com.project.InventoryMgtSys.models.Transaction;
 import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.JoinType;
 import jakarta.persistence.criteria.Predicate;
