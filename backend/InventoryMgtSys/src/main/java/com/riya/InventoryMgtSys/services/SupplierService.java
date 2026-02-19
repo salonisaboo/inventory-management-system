@@ -1,7 +1,7 @@
-package com.riya.InventoryMgtSys.services;
+package com.project.InventoryMgtSys.services;
 
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.dtos.SupplierDTO;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.SupplierDTO;
 
 public interface SupplierService {
 
