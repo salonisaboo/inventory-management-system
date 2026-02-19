@@ -2,8 +2,8 @@ package com.project.InventoryMgtSys.dtos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.riya.InventoryMgtSys.enums.TransactionStatus;
-import com.riya.InventoryMgtSys.enums.TransactionType;
+import com.project.InventoryMgtSys.enums.TransactionStatus;
+import com.project.InventoryMgtSys.enums.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
