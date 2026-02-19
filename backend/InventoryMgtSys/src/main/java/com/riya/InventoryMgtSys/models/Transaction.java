@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.models;
+package com.project.InventoryMgtSys.models;
 
 import com.riya.InventoryMgtSys.enums.TransactionStatus;
 import com.riya.InventoryMgtSys.enums.TransactionType;
