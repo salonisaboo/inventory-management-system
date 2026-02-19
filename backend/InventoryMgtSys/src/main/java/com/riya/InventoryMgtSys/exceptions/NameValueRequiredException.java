@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.exceptions;
+package com.project.InventoryMgtSys.exceptions;
 
 public class NameValueRequiredException extends RuntimeException {
     public NameValueRequiredException(String message){
