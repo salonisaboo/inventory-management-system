@@ -1,11 +1,11 @@
-package com.riya.InventoryMgtSys.services.impl;
+package com.project.InventoryMgtSys.services.impl;
 
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.dtos.SupplierDTO;
-import com.riya.InventoryMgtSys.exceptions.NotFoundException;
-import com.riya.InventoryMgtSys.models.Supplier;
-import com.riya.InventoryMgtSys.repositories.SupplierRepository;
-import com.riya.InventoryMgtSys.services.SupplierService;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.SupplierDTO;
+import com.project.InventoryMgtSys.exceptions.NotFoundException;
+import com.project.InventoryMgtSys.models.Supplier;
+import com.project.InventoryMgtSys.repositories.SupplierRepository;
+import com.project.InventoryMgtSys.services.SupplierService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
