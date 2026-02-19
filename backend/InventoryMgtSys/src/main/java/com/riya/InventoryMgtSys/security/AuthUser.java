@@ -1,6 +1,6 @@
-package com.riya.InventoryMgtSys.security;
+package com.project.InventoryMgtSys.security;
 
-import com.riya.InventoryMgtSys.models.User;
+import com.project.InventoryMgtSys.models.User;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
