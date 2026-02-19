@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.security;
+package com.project.InventoryMgtSys.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
