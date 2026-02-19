@@ -1,7 +1,7 @@
-package com.riya.InventoryMgtSys.services;
+package com.project.InventoryMgtSys.services;
 
-import com.riya.InventoryMgtSys.dtos.CategoryDTO;
-import com.riya.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.CategoryDTO;
+import com.project.InventoryMgtSys.dtos.Response;
 
 public interface CategoryService {
 
