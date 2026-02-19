@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.dtos;
+package com.project.InventoryMgtSys.dtos;
 
 import com.riya.InventoryMgtSys.enums.UserRole;
 import jakarta.validation.constraints.NotBlank;
