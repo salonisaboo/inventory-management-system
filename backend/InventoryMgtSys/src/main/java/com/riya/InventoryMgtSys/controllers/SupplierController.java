@@ -1,8 +1,8 @@
 package com.project.InventoryMgtSys.controllers;
 
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.dtos.SupplierDTO;
-import com.riya.InventoryMgtSys.services.SupplierService;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.SupplierDTO;
+import com.project.InventoryMgtSys.services.SupplierService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
