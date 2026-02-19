@@ -1,6 +1,6 @@
-package com.riya.InventoryMgtSys.repositories;
+package com.project.InventoryMgtSys.repositories;
 
-import com.riya.InventoryMgtSys.models.Category;
+import com.project.InventoryMgtSys.models.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {
