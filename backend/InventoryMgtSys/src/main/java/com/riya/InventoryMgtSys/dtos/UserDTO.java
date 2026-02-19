@@ -4,7 +4,7 @@ package com.project.InventoryMgtSys.dtos;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.riya.InventoryMgtSys.enums.UserRole;
+import com.project.InventoryMgtSys.enums.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
