@@ -1,7 +1,7 @@
 package com.project.InventoryMgtSys.models;
 
-import com.riya.InventoryMgtSys.enums.TransactionStatus;
-import com.riya.InventoryMgtSys.enums.TransactionType;
+import com.project.InventoryMgtSys.enums.TransactionStatus;
+import com.project.InventoryMgtSys.enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
