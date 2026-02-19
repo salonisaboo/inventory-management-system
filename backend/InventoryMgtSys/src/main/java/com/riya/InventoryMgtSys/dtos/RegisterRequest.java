@@ -1,6 +1,6 @@
 package com.project.InventoryMgtSys.dtos;
 
-import com.riya.InventoryMgtSys.enums.UserRole;
+import com.project.InventoryMgtSys.enums.UserRole;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
