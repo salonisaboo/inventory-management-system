@@ -1,6 +1,6 @@
-package com.riya.InventoryMgtSys.repositories;
+package com.project.InventoryMgtSys.repositories;
 
-import com.riya.InventoryMgtSys.models.User;
+import com.project.InventoryMgtSys.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
