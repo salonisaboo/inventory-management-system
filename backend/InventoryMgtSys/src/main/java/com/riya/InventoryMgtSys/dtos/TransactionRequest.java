@@ -1,7 +1,7 @@
 package com.project.InventoryMgtSys.dtos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.riya.InventoryMgtSys.enums.UserRole;
+import com.project.InventoryMgtSys.enums.UserRole;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
