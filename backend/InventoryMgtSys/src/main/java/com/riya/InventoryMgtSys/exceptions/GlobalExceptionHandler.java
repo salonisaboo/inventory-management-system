@@ -1,5 +1,5 @@
-package com.riya.InventoryMgtSys.exceptions;
-import com.riya.InventoryMgtSys.dtos.Response;
+package com.project.InventoryMgtSys.exceptions;
+import com.project.InventoryMgtSys.dtos.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
