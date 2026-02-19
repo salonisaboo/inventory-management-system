@@ -1,6 +1,6 @@
-package com.riya.InventoryMgtSys.exceptions;
+package com.project.InventoryMgtSys.exceptions;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.riya.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.Response;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
