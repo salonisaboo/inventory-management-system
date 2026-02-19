@@ -1,8 +1,8 @@
 package com.project.InventoryMgtSys.controllers;
 
-import com.riya.InventoryMgtSys.dtos.ProductDTO;
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.services.ProductService;
+import com.project.InventoryMgtSys.dtos.ProductDTO;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
