@@ -1,10 +1,10 @@
-package com.riya.InventoryMgtSys.services;
+package com.project.InventoryMgtSys.services;
 
-import com.riya.InventoryMgtSys.dtos.LoginRequest;
-import com.riya.InventoryMgtSys.dtos.RegisterRequest;
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.dtos.UserDTO;
-import com.riya.InventoryMgtSys.models.User;
+import com.project.InventoryMgtSys.dtos.LoginRequest;
+import com.project.InventoryMgtSys.dtos.RegisterRequest;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.UserDTO;
+import com.project.InventoryMgtSys.models.User;
 
 public interface UserService {
     Response registerUser(RegisterRequest registerRequest);
