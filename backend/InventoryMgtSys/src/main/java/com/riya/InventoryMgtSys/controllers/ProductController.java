@@ -1,4 +1,4 @@
-package com.riya.InventoryMgtSys.controllers;
+package com.project.InventoryMgtSys.controllers;
 
 import com.riya.InventoryMgtSys.dtos.ProductDTO;
 import com.riya.InventoryMgtSys.dtos.Response;
