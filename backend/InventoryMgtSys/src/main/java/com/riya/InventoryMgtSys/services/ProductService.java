@@ -1,7 +1,7 @@
-package com.riya.InventoryMgtSys.services;
+package com.project.InventoryMgtSys.services;
 
-import com.riya.InventoryMgtSys.dtos.ProductDTO;
-import com.riya.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.dtos.ProductDTO;
+import com.project.InventoryMgtSys.dtos.Response;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface ProductService {
