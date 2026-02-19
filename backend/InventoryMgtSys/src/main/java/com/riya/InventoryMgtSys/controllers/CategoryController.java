@@ -1,9 +1,9 @@
 package com.project.InventoryMgtSys.controllers;
 
 
-import com.riya.InventoryMgtSys.dtos.CategoryDTO;
-import com.riya.InventoryMgtSys.dtos.Response;
-import com.riya.InventoryMgtSys.services.CategoryService;
+import com.project.InventoryMgtSys.dtos.CategoryDTO;
+import com.project.InventoryMgtSys.dtos.Response;
+import com.project.InventoryMgtSys.services.CategoryService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
