@@ -54,7 +54,4 @@ The application follows a layered backend architecture and communicates with the
 - Visual Studio Code  
 - Postman  
 
----
-
-## Frontend Structure (Example)
 
