@@ -3,7 +3,7 @@ import CryptoJS from "crypto-js";
 
 export default class ApiService {
 
-    static BASE_URL = "http://localhost:8080/api";
+    static BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8084/api";
     static ENCRYPTION_KEY = "phegon-dev-inventory";
 
 
@@ -102,7 +102,7 @@ export default class ApiService {
     }
 
     static async deleteUser(userId) {
-        const response = await axios.delete(`${this.BASE_URL}/users/update/${userId}`, {
+        const response = await axios.delete(`${this.BASE_URL}/users/delete/${userId}`, {
             headers: this.getHeader()
         });
         return response.data;
@@ -151,7 +151,7 @@ export default class ApiService {
 
     static async searchProduct(searchValue) {
         const response = await axios.get(`${this.BASE_URL}/products/search`, {
-            params: { searchValue },
+            params: { input: searchValue },
             headers: this.getHeader()
         });
         return response.data;

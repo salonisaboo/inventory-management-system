@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../component/Layout";
 import ApiService from "../service/ApiService";
 
@@ -10,17 +10,17 @@ const ProfilePage = () => {
     const fetchUserInfo = async () => {
       try {
         const userInfo = await ApiService.getLoggedInUsesInfo();
-        setUser(userInfo);
+        setUser(userInfo.user);
       } catch (error) {
         showMessage(
           error.response?.data?.message || "Error Loggin in a User: " + error
         );
       }
     };
+
     fetchUserInfo();
   }, []);
 
-  //Method> to show message or errors
   const showMessage = (msg) => {
     setMessage(msg);
     setTimeout(() => {
@@ -34,7 +34,7 @@ const ProfilePage = () => {
       <div className="profile-page">
         {user && (
           <div className="profile-card">
-            <h1>Hello, {user.name} 🥳</h1>
+            <h1>Hello, {user.name}</h1>
             <div className="profile-info">
               <div className="profile-item">
                 <label>Name</label>
@@ -59,4 +59,5 @@ const ProfilePage = () => {
     </Layout>
   );
 };
+
 export default ProfilePage;

@@ -2,7 +2,6 @@ package com.project.InventoryMgtSys.controllers;
 
 import com.project.InventoryMgtSys.dtos.Response;
 import com.project.InventoryMgtSys.dtos.UserDTO;
-import com.project.InventoryMgtSys.models.User;
 import com.project.InventoryMgtSys.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -25,11 +24,13 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> getUserById(@PathVariable Long id) {
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
     @PutMapping("/update/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> updateUser(@PathVariable Long id, @RequestBody UserDTO userDTO) {
         return ResponseEntity.ok(userService.updateUser(id, userDTO));
     }
@@ -41,13 +42,14 @@ public class UserController {
     }
 
     @GetMapping("/transactions/{userId}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<Response> getUserAndTransactions(@PathVariable Long userId) {
         return ResponseEntity.ok(userService.getUserTransactions(userId));
     }
 
     @GetMapping("/current")
-    public ResponseEntity<User> getCurrentUser(){
-        return ResponseEntity.ok(userService.getCurrentLoggedInUser());
+    public ResponseEntity<Response> getCurrentUser() {
+        return ResponseEntity.ok(userService.getCurrentUserInfo());
     }
 
 

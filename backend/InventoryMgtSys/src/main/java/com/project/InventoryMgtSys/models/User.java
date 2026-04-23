@@ -1,6 +1,7 @@
 package com.project.InventoryMgtSys.models;
 
 import com.project.InventoryMgtSys.enums.UserRole;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import jakarta.validation.constraints.NotBlank;
@@ -31,6 +32,7 @@ public class User {
     @NotBlank(message = "Email is required")
     private String email;
 
+    @JsonIgnore
     @NotBlank(message = "Password is required")
     private String password;
 

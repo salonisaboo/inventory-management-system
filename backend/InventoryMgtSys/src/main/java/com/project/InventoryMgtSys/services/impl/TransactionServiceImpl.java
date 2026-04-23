@@ -6,6 +6,7 @@ import com.project.InventoryMgtSys.dtos.TransactionDTO;
 import com.project.InventoryMgtSys.dtos.TransactionRequest;
 import com.project.InventoryMgtSys.enums.TransactionStatus;
 import com.project.InventoryMgtSys.enums.TransactionType;
+import com.project.InventoryMgtSys.exceptions.InvalidOperationException;
 import com.project.InventoryMgtSys.exceptions.NameValueRequiredException;
 import com.project.InventoryMgtSys.exceptions.NotFoundException;
 import com.project.InventoryMgtSys.models.Product;
@@ -28,6 +29,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -36,6 +38,7 @@ import java.util.List;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@Transactional
 public class TransactionServiceImpl implements TransactionService {
 
     private final TransactionRepository transactionRepository;
@@ -97,6 +100,10 @@ public class TransactionServiceImpl implements TransactionService {
 
         User user = userService.getCurrentLoggedInUser();
 
+        if (product.getStockQuantity() < quantity) {
+            throw new InvalidOperationException("Insufficient stock available for this sale");
+        }
+
         //update the stock quantity and re-save
         product.setStockQuantity(product.getStockQuantity() - quantity);
         productRepository.save(product);
@@ -139,6 +146,10 @@ public class TransactionServiceImpl implements TransactionService {
                 .orElseThrow(() -> new NotFoundException("Supplier Not Found"));
 
         User user = userService.getCurrentLoggedInUser();
+
+        if (product.getStockQuantity() < quantity) {
+            throw new InvalidOperationException("Return quantity cannot exceed current stock");
+        }
 
         //update the stock quantity and re-save
         product.setStockQuantity(product.getStockQuantity() - quantity);

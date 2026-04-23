@@ -4,7 +4,7 @@ import ApiService from "../service/ApiService";
 import { useNavigate, useParams } from "react-router-dom";
 
 const AddEditProductPage = () => {
-  const { productId } = useParams("");
+  const { productId } = useParams();
   const [name, setName] = useState("");
   const [sku, setSku] = useState("");
   const [price, setPrice] = useState("");
@@ -41,7 +41,7 @@ const AddEditProductPage = () => {
             setName(productData.product.name);
             setSku(productData.product.sku);
             setPrice(productData.product.price);
-            setStokeQuantity(productData.product.stockQuantity);
+            setStockQuantity(productData.product.stockQuantity);
             setCategoryId(productData.product.categoryId);
             setDescription(productData.product.description);
             setImageUrl(productData.product.imageUrl);
@@ -71,6 +71,8 @@ const AddEditProductPage = () => {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+    if (!file) return;
+
     setImageFile(file);
     const reader = new FileReader();
     reader.onloadend = () => setImageUrl(reader.result); //user imagurl to preview the image to upload

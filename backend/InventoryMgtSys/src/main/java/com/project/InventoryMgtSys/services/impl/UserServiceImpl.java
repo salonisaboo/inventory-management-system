@@ -5,6 +5,7 @@ import com.project.InventoryMgtSys.dtos.RegisterRequest;
 import com.project.InventoryMgtSys.dtos.Response;
 import com.project.InventoryMgtSys.dtos.UserDTO;
 import com.project.InventoryMgtSys.enums.UserRole;
+import com.project.InventoryMgtSys.exceptions.InvalidOperationException;
 import com.project.InventoryMgtSys.exceptions.InvalidCredentialsException;
 import com.project.InventoryMgtSys.exceptions.NotFoundException;
 import com.project.InventoryMgtSys.models.User;
@@ -36,11 +37,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Response registerUser(RegisterRequest registerRequest) {
-
-        UserRole role = UserRole.MANAGER;
-
-        if (registerRequest.getRole() != null) {
-            role = registerRequest.getRole();
+        if (userRepository.existsByEmail(registerRequest.getEmail())) {
+            throw new InvalidOperationException("An account with this email already exists");
         }
 
         User userToSave = User.builder()
@@ -48,7 +46,7 @@ public class UserServiceImpl implements UserService {
                 .email(registerRequest.getEmail())
                 .password(passwordEncoder.encode(registerRequest.getPassword()))
                 .phoneNumber(registerRequest.getPhoneNumber())
-                .role(role)
+                .role(UserRole.MANAGER)
                 .build();
 
         userRepository.save(userToSave);
@@ -110,6 +108,18 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public Response getCurrentUserInfo() {
+        User currentUser = getCurrentLoggedInUser();
+        UserDTO userDTO = modelMapper.map(currentUser, UserDTO.class);
+
+        return Response.builder()
+                .status(200)
+                .message("success")
+                .user(userDTO)
+                .build();
+    }
+
+    @Override
     public Response getUserById(Long id) {
 
         User user = userRepository.findById(id).orElseThrow(() -> new NotFoundException("User Not Found"));
@@ -129,6 +139,11 @@ public class UserServiceImpl implements UserService {
     public Response updateUser(Long id, UserDTO userDTO) {
 
         User existingUser = userRepository.findById(id).orElseThrow(() -> new NotFoundException("User Not Found"));
+
+        if (userDTO.getEmail() != null && !userDTO.getEmail().equalsIgnoreCase(existingUser.getEmail())
+                && userRepository.existsByEmail(userDTO.getEmail())) {
+            throw new InvalidOperationException("Email is already in use");
+        }
 
         if (userDTO.getEmail() != null) existingUser.setEmail(userDTO.getEmail());
         if (userDTO.getPhoneNumber() != null) existingUser.setPhoneNumber(userDTO.getPhoneNumber());

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../component/Layout";
 import ApiService from "../service/ApiService";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,6 @@ const ProductPage = () => {
 
   const navigate = useNavigate();
 
-  // Pagination Set-Up
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 10;
@@ -40,28 +39,24 @@ const ProductPage = () => {
     getProducts();
   }, [currentPage]);
 
-  // Delete a product
   const handleDeleteProduct = async (productId) => {
     if (window.confirm("Are you sure you want to delete this Product?")) {
       try {
         await ApiService.deleteProduct(productId);
         showMessage("Product successfully Deleted");
-        window.location.reload(); // Reload page
+        window.location.reload();
       } catch (error) {
         showMessage(
-          error.response?.data?.message ||
-          "Error Deleting a product: " + error
+          error.response?.data?.message || "Error Deleting a product: " + error
         );
       }
     }
   };
 
-  // Show Low Stock Only
   const handleFilterLowStock = () => {
     setProducts((prev) => prev.filter((p) => p.stockQuantity <= 5));
   };
 
-  // Show Message or Errors
   const showMessage = (msg) => {
     setMessage(msg);
     setTimeout(() => {
@@ -103,7 +98,7 @@ const ProductPage = () => {
                 <div className="product-info">
                   <h3 className="name">{product.name}</h3>
                   <p className="sku">SKU: {product.sku}</p>
-                  <p className="price">Price: ₹{product.price}</p>
+                  <p className="price">Price: Rs. {product.price}</p>
                   <p className="quantity">
                     Quantity: {product.stockQuantity}
                     {product.lowStockThreshold != null &&
@@ -115,7 +110,6 @@ const ProductPage = () => {
                       )}
                   </p>
 
-                  {/* Low Stock Warning */}
                   {product.stockQuantity <= 5 && (
                     <p
                       className="low-stock-warning"
@@ -125,7 +119,6 @@ const ProductPage = () => {
                     </p>
                   )}
 
-                  {/* Out of Stock Warning */}
                   {product.stockQuantity === 0 && (
                     <p
                       className="out-of-stock-warning"
